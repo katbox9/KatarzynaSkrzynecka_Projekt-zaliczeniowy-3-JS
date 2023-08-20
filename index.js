@@ -20,3 +20,6 @@ function convertCurrency(rate, userInput) {
 }
 
 form.addEventListener("submit", convertCurrency);
+const span = document.createElement("span");
+span.innerHTML = "to";
+document.body.appendChild(span);
