@@ -9,18 +9,13 @@ function getExchangeRate(event) {
     .get(
       `https://api.nbp.pl/api/exchangerates/rates/a/${select.value}/?format=json`
     )
-    .then((response) => getExchangeRate(response.data.rates[0].mid))
+    .then((response) => convertCurrency(response.data.rates[0].mid))
     .catch((error) => console.log(error));
 }
 
 function convertCurrency(rate) {
-  const rate = response?.data?.rates[0]?.mid;
-  if (rate) {
-    const userInput = input.value;
-    return userInput * rate;
-  } else {
-    alert("Mamy problem. Spróbuj ponownie za kilka minut.");
-  }
+  const userInput = input.name.value;
+  return userInput * rate;
 }
 
 form.addEventListener("submit", convertCurrency);
