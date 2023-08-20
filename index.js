@@ -13,9 +13,10 @@ function getExchangeRate(event) {
     .catch((error) => console.log(error));
 }
 
-function convertCurrency(rate) {
-  const userInput = input.name.value;
-  return userInput * rate;
+function convertCurrency(rate, userInput) {
+  const userInput = input.target.name.value;
+  const total = userInput * rate;
+  return total;
 }
 
 form.addEventListener("submit", convertCurrency);
