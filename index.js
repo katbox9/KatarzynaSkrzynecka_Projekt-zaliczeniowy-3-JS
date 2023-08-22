@@ -2,6 +2,7 @@ const form = document.getElementById("currency-container");
 const input = document.getElementById("amount-to-be-calculated");
 const select = document.getElementById("currency");
 const btn = document.getElementById("btn");
+const output = document.getElementById("result");
 
 function getExchangeRate(event) {
   event.preventDefault();
@@ -16,12 +17,7 @@ function getExchangeRate(event) {
 function convertCurrency(rate) {
   const userInput = input.value;
   const total = userInput * rate;
-  return total;
+  output.innerText = `to ${total.toFixed(2)} PLN`;
 }
 
 form.addEventListener("submit", getExchangeRate);
-const span = document.createElement("span");
-span.innerHTML = "to";
-document.body.appendChild(span);
-
-const output = document.getElementById("result");
