@@ -1,7 +1,5 @@
 # KatarzynaSkrzynecka_Projekt-zaliczeniowy-3
 
-# KatarzynaSkrzynecka_Projekt-zaliczeniowy-3
-
 The third final project for the Frontend Developer course.
 
 ## How it looks
